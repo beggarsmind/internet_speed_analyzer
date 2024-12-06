@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet Speed Analyzer</title>
+    <style>
+      body {
+        width: 980px; /* Increased width */
+        font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell;
+        background: #f5fff0; /* Light Alice Blue */
+        color: #333;
+        margin-top: 10px;
+        padding: 20px; /* Slightly increased padding for better spacing */
+        box-sizing: border-box;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      h3 {
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+        font-family: "Segoe UI", sans-serif;
+        padding: 8px;
+        width: 90%; /* Adaptive to container */
+        margin: 0 0 12px; /* Unified margin for cleaner look */
+        border-radius: 8px;
+        color: #00574b; /* Slightly darker teal */
+        background: linear-gradient(
+          145deg,
+          rgba(213, 185, 231, 0.9),
+          rgba(255, 255, 255, 0.5)
+        ); /* Subtle gradient */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+          inset 0 2px 3px rgba(255, 255, 255, 0.3); /* Soft shadows */
+        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Interactive animations */
+      }
+      .result-item {
+        margin: 5px 0;
+      }
+
+      .result-item span {
+        font-weight: bold;
+        color: #ffffff; /* White text for result labels */
+      }
+      #result p {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-style: normal;
+        margin-top: 5px;
+        font-weight: 400;
+      }
+
+      .speed-results {
+        display: flex;
+        flex-direction: column; /* Stack rows vertically */
+        gap: 10px; /* Add space between rows */
+      }
+
+      .speed-row {
+        display: flex; /* Arrange items in a row */
+        gap: 10px; /* Add space between items */
+        justify-content: space-between; /* Spread items evenly */
+      }
+
+      .speed-item {
+        flex: 1; /* Ensure items take equal width */
+        padding: 8px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 16px;
+        color: #333;
+        background-color: #ffffff;
+        background: linear-gradient(45deg, #92afdb, #b6fbff);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .speed-item.full-width {
+        flex: none; /* Full-width item */
+        width: 93%; /* Full width for Ping */
+      }
+
+      .download {
+        color: #1f8013;
+        font-size: 18px;
+        font-weight: bold; /* Teal for Download Speed */
+      }
+
+      .upload {
+        color: #285bc9;
+        font-size: 18px; /* Darker teal for Upload Speed */
+        font-weight: bold;
+      }
+
+      .ping {
+        color: #c62828; /* Red for Ping */
+        font-size: 18px; /* Decreased font size for Ping */
+        font-weight: bold;
+      }
+
+      .footer {
+        background-color: #ffffff; /* White background */
+        color: #333; /* Dark text color for contrast */
+        text-align: center; /* Center-align the content */
+        padding: 8px; /* Add some padding for spacing */
+        font-family: "Segoe UI", Arial, sans-serif; /* Consistent font */
+        font-size: 12px; /* Adjust font size for readability */
+        border-top: 1px solid #ddd; /* Optional: Add a subtle border on top */
+        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+        border-radius: 8px;
+        margin-top: 5px;
+        background: linear-gradient(90deg, #e0eaf3, #c0d4f0);
+        font-weight: bold;
+      }
+
+      /* Small screen responsiveness */
+      @media (max-width: 360px) {
+        body {
+          width: 260px;
+        }
+      }
+      .ver {
+        color: #333; /* Dark text color for contrast */
+        text-align: right; /* Center-align the content */
+        margin-bottom: -20px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px; /* Adjust font size for readability */
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Internet Speed Analyzer</h3>
+    <div id="result">
+      <p>Testing speed...</p>
+      <!-- Test results will be inserted here dynamically -->
+    </div>
+
+    <div class="footer">
+      <footer>
+        Re-Designed By Ranjithkumar.R <br />
+        <a href="https://github.com/beggarsmind">Beggar's Mind</a>
+      </footer>
+    </div>
+    <script src="popup.js"></script>
+    <div class="ver"><h4>Version 1.1</h4></div>
+  </body>
+</html>
